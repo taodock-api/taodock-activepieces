@@ -41,6 +41,7 @@ const distManifest = {
   files: ['src/index.js'],
   keywords: rootManifest.keywords,
   license: rootManifest.license,
+  repository: rootManifest.repository,
   publishConfig: { access: 'public' },
 };
 writeFileSync(join(distDir, 'package.json'), `${JSON.stringify(distManifest, null, 2)}\n`);
