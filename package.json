@@ -1,0 +1,39 @@
+{
+  "name": "@taodock-ai/piece-taodock",
+  "version": "0.1.0",
+  "description": "Taodock piece for Activepieces: model discovery, image generation, video generation, video task status and downloads.",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "build": "node build/build.mjs",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "lint": "eslint \"src/**/*.ts\" \"test/**/*.ts\"",
+    "verify": "npm run typecheck && npm run lint && npm run test && npm run build && node build/verify-bundle.mjs",
+    "pack:check": "npm pack --dry-run ./dist"
+  },
+  "keywords": [
+    "activepieces",
+    "piece",
+    "taodock",
+    "ai",
+    "image-generation",
+    "video-generation"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.11.0"
+  },
+  "dependencies": {
+    "@activepieces/pieces-common": "0.12.5",
+    "@activepieces/pieces-framework": "0.32.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "esbuild": "^0.25.0",
+    "eslint": "^9.20.0",
+    "typescript": "^5.7.0",
+    "typescript-eslint": "^8.24.0",
+    "vitest": "^3.0.0"
+  }
+}
